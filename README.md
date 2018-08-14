@@ -12,6 +12,7 @@ How to Add or Update a Job
   * java-docker-jobs.yml --> Java apps running on ECS/docker
   * java-jobs.yml --> Java apps running in a non-containerized environment
   * simple-jobs.yml --> Docker image build jobs and other misc jobs
+  * pipeline-jobs.yml --> Multibranch pipeline jobs
 * Test your work
   * Push your feature branch to github
   * Request Mike Albert to turn on Jenkins Lab, if jenkins-lab.cru.org gives you a 503.
@@ -24,6 +25,14 @@ How to Add or Update a Job
 * After approval has been given, merge to master and delete the feature branch
 * To create your new job on Jenkins, run the "create-jenkins-jobs" [job][2] on Jenkins Production.
 
+
+Pipeline Library
+----------------
+This repository also serves as a Jenkins Pipeline shared library.
+As such it follows the layout requirements:
+ * global variables (which can act like steps) go in `vars`
+ * classes (which can hold state or just encapsulate complexity) go in `src`
+ * tests go in `test`
 
 [1]: https://jenkins-lab.cru.org/job/create-jenkins-jobs/configure
 [2]: https://jenkins-prod.cru.org/job/create-jenkins-jobs/

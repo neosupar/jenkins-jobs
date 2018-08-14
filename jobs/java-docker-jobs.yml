@@ -60,6 +60,11 @@
             names:
               - Deploy to Staging
               - Deploy to Production
+      - build-discarder:
+          days-to-keep: 64
+          artifact-days-to-keep: 64
+
+    node: linux
     scm:
       - git:
           branches:

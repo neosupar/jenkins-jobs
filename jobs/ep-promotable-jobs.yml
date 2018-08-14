@@ -23,6 +23,7 @@
             names:
               - Deploy to Staging
 
+    node: linux
     scm:
       - git:
           branches:
@@ -54,7 +55,6 @@
           -e development \
           -t ${environment}-$BUILD_NUMBER
 
-
 - job-template:
     name: give-ep-docker-images-master
     description: |
@@ -75,6 +75,7 @@
             names:
               - Deploy to Production
 
+    node: linux
     scm:
       - git:
           branches:
@@ -101,4 +102,8 @@
           -p $WORKSPACE/pusher-package/target/ext-deployment-package-${{RELEASE_NUMBER}}.zip \
           -f config/docker-build-production.conf \
           -e production \
+<<<<<<< HEAD
           -t ${environment}-${{RELEASE_NUMBER}}
+=======
+          -t {environment}-${{RELEASE_NUMBER}}
+>>>>>>> add-job-airflow

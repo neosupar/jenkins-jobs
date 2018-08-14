@@ -28,21 +28,7 @@
       - trigger-parameterized-builds:
           - project: deploy-ecs
             predefined-parameters: |
-              PROJECT_NAME=give-ep-cmserver
-              IMAGE_TAG=staging-${BUILD_NUMBER}
-              GIT_BRANCH=origin/develop
-              ENVIRONMENT=staging
-      - trigger-parameterized-builds:
-          - project: deploy-ecs
-            predefined-parameters: |
               PROJECT_NAME=give-ep-integration
-              IMAGE_TAG=staging-${BUILD_NUMBER}
-              GIT_BRANCH=origin/develop
-              ENVIRONMENT=staging
-      - trigger-parameterized-builds:
-          - project: deploy-ecs
-            predefined-parameters: |
-              PROJECT_NAME=give-ep-search
               IMAGE_TAG=staging-${BUILD_NUMBER}
               GIT_BRANCH=origin/develop
               ENVIRONMENT=staging
@@ -60,6 +46,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-devops/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -101,6 +88,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-commerce-engine/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -135,6 +123,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-commerce-engine/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -168,6 +157,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-commerce-engine/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -202,6 +192,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-extensions/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -236,6 +227,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-extensions/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -269,6 +261,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-extensions/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -302,6 +295,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-cmclient/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -336,6 +330,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-extensions/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -383,6 +378,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-devops/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -524,6 +520,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-devops/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -563,6 +560,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-commerce-engine/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -594,6 +592,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-extensions/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -626,6 +625,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-cmclient/
 
+    node: linux
     scm:
       - git:
           branches:
@@ -709,6 +709,7 @@
       - github:
           url: https://github.com/CruGlobal/give-ep-devops/
 
+    node: linux
     scm:
       - git:
           branches:
