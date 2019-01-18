@@ -224,3 +224,26 @@
           # You'll have to add it again for each time you execute this job.
 
           ansible-playbook aws_jenkins_add_jobs.yml --tags="jjb_add_jobs"
+
+
+- job:
+    name: ecs-scale-down-lab
+    description: |
+      Scales down infrastructure for container fleet.
+
+    properties:
+      - github:
+          url: https://github.com/CruGlobal/cru-ansible/
+
+    node: linux
+    scm:
+      - git:
+          branches:
+          - ecs_scale_down
+          url: git@github.com:CruGlobal/cru-ansible.git
+          wipe-workspace: false
+          skip-tag: true
+
+    builders:
+      - shell: |
+          ansible-playbook aws_ecs_scale_down.yml -i aws_inventory/lab
