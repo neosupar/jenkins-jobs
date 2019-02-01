@@ -239,7 +239,7 @@
     scm:
       - git:
           branches:
-          - ecs_scale_down
+          - master
           url: git@github.com:CruGlobal/cru-ansible.git
           wipe-workspace: false
           skip-tag: true
@@ -247,3 +247,24 @@
     builders:
       - shell: |
           ansible-playbook aws_ecs_scale_down.yml -i aws_inventory/lab
+- job:
+    name: ecs-scale-up-lab
+    description: |
+      Scales up infrastructure for container fleet.
+
+    properties:
+      - github:
+          url: https://github.com/CruGlobal/cru-ansible/
+
+    node: linux
+    scm:
+      - git:
+          branches:
+          - master
+          url: git@github.com:CruGlobal/cru-ansible.git
+          wipe-workspace: false
+          skip-tag: true
+
+    builders:
+      - shell: |
+          ansible-playbook aws_ecs_replace_all.yml -i aws_inventory/lab
